@@ -1,0 +1,17 @@
+# About @see https://editorconfig.org/#example-file
+#
+# @author HA3IK [Nazar Holubovskyy] <golubha3ik@gmail.com>
+# @version 1.1.0
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false

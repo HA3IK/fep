@@ -1,0 +1,100 @@
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+
+/* Main */
+
+:root {
+  /* b/c */
+  word-wrap: break-word;
+  /* basic */
+  -webkit-text-size-adjust: 100%;
+  color: hsl(220, 15%, 55%);
+  display: table;
+  font: 400 93.75%/1.267 Outfit, sans-serif; /* font-size: 15px (medium) */
+  height: 100%;
+  overflow-wrap: anywhere;
+  text-rendering: optimizeSpeed;
+  width: 100%;
+}
+
+body {
+  background: hsl(212, 45%, 89%);
+  display: table-cell;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card-cover {
+  display: inline-block;
+  margin: .5rem 3%;
+  max-width: 21.334rem;
+}
+
+.card {
+  background: hsl(0, 0%, 100%);
+  border-radius: 1.333rem;
+  box-shadow: 0 1.667rem 1.667rem hsla(0, 0%, 0%, 0.0476518);
+  padding: 1.067rem 1.067rem 2.667rem;
+}
+
+.card-img {
+  border-radius: 0.667rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.card-title {
+  color: hsl(218, 44%, 22%);
+  font-size: 146.7%;
+  font-weight: 700;
+  line-height: 1.273;
+  margin-top: 1.6rem;
+}
+
+.card-desc {
+  letter-spacing: 0.0125rem;
+  margin: 1.067rem auto 0;
+  width: 88.89%;
+}
+
+
+/* (Out of the challenge) FOOTER: Attribution  */
+
+.attribution {
+  font-size: 74%;
+  min-width: 100%;
+  padding: 0 3% 1rem;
+  position: absolute;
+}
+
+.attribution a {
+  color: hsl(216, 95%, 58%);
+  white-space: nowrap;
+}
+
+.attribution abbr {
+  cursor: inherit;
+}

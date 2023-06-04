@@ -1,0 +1,4 @@
+[submodule "qr-code-component"]
+	path = qr-code-component
+	url = git@github.com:HA3IK/fep.git
+	branch = qr-code-component

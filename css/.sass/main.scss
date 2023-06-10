@@ -1,0 +1,235 @@
+// Reset
+
+@use 'reset';
+
+
+// Vars
+$px-2: 0.125rem; // ~2px
+$px-25: 1.5625rem; // ~25px
+$px-280: 17.5rem; // ~280px
+$px-480: 30rem; // ~480px
+$px-481: 30.05rem; // ~481px
+$px-780: 48.75rem; // ~780px
+$color-white: #fff;
+$color-grey: #f2f2f2;
+$color-orange: #e38826;
+$color-blue: #006970;
+$color-torq: #004140;
+
+
+// Main
+
+:root {
+  // b/c
+  word-wrap: break-word;
+  // basic
+  -webkit-text-size-adjust: 100%;
+  background: $color-grey;
+  color: transparentize($color-white, 0.25); // hsla(0,0%,100%,.75)
+  display: table;
+  font-size: 100%;
+  height: 100%;
+  min-width: 10.625rem; // 170px
+  overflow-wrap: anywhere;
+  text-rendering: optimizeSpeed;
+  width: 100%;
+}
+
+body {
+  display: table-cell;
+  font: 400 93.75%/1.6667 'Lexend Deca', Verdana, Geneva, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.row {
+  border-radius: .5rem;
+  display: inline-flex;
+  margin: 1%;
+  max-width: 57.5rem;
+  min-height: 31.25rem; // 500px
+  overflow: hidden;
+  text-align: left;
+}
+
+.icon {
+  margin-bottom: 2.1875rem;
+}
+
+
+// Columns
+
+.col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 3rem;
+}
+
+.col-sedan {
+  background: $color-orange;
+}
+
+.col-suv {
+  background: $color-blue;
+}
+
+.col-lux {
+  background: $color-torq;
+}
+
+
+// Text
+
+.title {
+  color: $color-grey;
+  font: 700 266.6667%/1.2 'Big Shoulders Display', Haettenschweiler, Impact, cursive;
+  margin-bottom: $px-25;
+  text-transform: uppercase;
+}
+
+.desc {
+  flex-grow: 1;
+  margin-bottom: 5.1875rem;
+}
+
+
+// Button
+
+.btn {
+  // b/c
+  word-wrap: normal;
+  // basic
+  background: $color-grey;
+  border-radius: $px-25;
+  display: inline-block;
+  max-width: 9.125rem;
+  overflow-wrap: normal;
+  padding: 0.71875rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.btn:hover {
+  background: none;
+  color: $color-white;
+  outline: $px-2 solid $color-white;
+  outline-offset: -#{$px-2};
+}
+
+.btn-sedan {
+  color: $color-orange;
+}
+
+.btn-suv {
+  color: $color-blue;
+}
+
+.btn-lux {
+  color: $color-torq;
+}
+
+
+// (Out of the challenge) FOOTER: Attribution
+
+.attribution {
+  color: $color-orange;
+  font-size: 74%;
+  min-width: 100%;
+  padding: 0 6% 0.5rem;
+  position: absolute;
+}
+
+.attribution a {
+  color: $color-blue;
+  white-space: nowrap;
+}
+
+.attribution abbr {
+  cursor: inherit;
+}
+
+
+// Media-queries
+
+// >= 1280px (PCs)
+@media (min-width: 80rem) {
+  .row {
+    margin-top: 3.9167%;
+  }
+}
+
+// 780-481px
+@media (min-width: $px-481) and (max-width: $px-780) {
+  .col {
+    padding: 6.547%;
+  }
+
+  .desc {
+    margin-bottom: 55.93%;
+  }
+}
+
+// <= 480px
+@media (max-width: $px-480) {
+  .row {
+    display: block;
+    margin: 23.457% 6.399%;
+  }
+
+  .col {
+    display: block;
+  }
+
+  .desc {
+    margin-bottom: $px-25;
+  }
+
+  // (Out of the challenge) FOOTER: Attribution
+
+  body {
+    position: relative;
+  }
+
+  .attribution {
+    bottom: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+// <= 280px
+@media (max-width: $px-280) {
+  .row {
+    margin: 10% 6% 5rem;
+  }
+
+  .col {
+    padding: 19%;
+  }
+}
+
+
+// Quirks fixes
+
+// IF NOT support "outline-offset" THEN borders
+@supports not (outline-offset: -#{$px-2}) {
+  .btn {
+    border: $px-2 solid $color-grey;
+    padding: .61875rem;
+  }
+
+  .btn:hover {
+    border-color: $color-white;
+    outline: 0;
+  }
+}
+
+// IF IE 10+
+@media (-ms-high-contrast: none) {
+  .row {
+    width: 100%;
+  }
+}

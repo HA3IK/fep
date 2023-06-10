@@ -2,3 +2,7 @@
 	path = qr-code-component
 	url = git@github.com:HA3IK/fep.git
 	branch = qr-code-component
+[submodule "3column-preview-card-component"]
+	path = 3column-preview-card-component
+	url = git@github.com:HA3IK/fep.git
+	branch = 3column-preview-card-component

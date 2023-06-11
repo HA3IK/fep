@@ -67,7 +67,11 @@ Variables list:
 - My margin bottom: 1%
 
 ✅ Calculated the top margin difference for computers:
-$$ ((171-129)/1440*100)+1≈3.9167\% $$
+
+```math
+((171-129)/1440*100)+1≈3.9167\%
+```
+
 ```css
 /* 1280+ px (PCs) */
 @media (min-width: 80rem) {
@@ -80,8 +84,8 @@ $$ ((171-129)/1440*100)+1≈3.9167\% $$
 ### `outline-offset` support for `:hover`
 
 ✅ By default, `:hover` works with the `outline`. If a user agent doesn't support `outline-offset`, then the `border` alternative is used.
-- `height` = $ height - border–width * 2 $
-- `width` = $ width - border–width * 2 $
+- `height` = $` height - border–width * 2 `$
+- `width` = $` width - border–width * 2 `$
 
 ```css
 @supports not (outline-offset: -0.125rem) {

@@ -6,3 +6,7 @@
 	path = 3column-preview-card-component
 	url = git@github.com:HA3IK/fep.git
 	branch = 3column-preview-card-component
+[submodule "four-card-feature-section"]
+	path = four-card-feature-section
+	url = git@github.com:HA3IK/fep.git
+	branch = four-card-feature-section

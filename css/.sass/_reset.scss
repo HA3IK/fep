@@ -1,0 +1,49 @@
+/**
+ * Reset CSS
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: button;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+img {
+  vertical-align: middle;
+}
+
+main {
+  display: block;
+}

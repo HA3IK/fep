@@ -1,0 +1,110 @@
+/**
+ * Fallback fonts
+ *
+ * w = font-weight
+ */
+
+/* w500 */
+
+@font-face {
+  font-family: "fbAndroid";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium");
+  size-adjust: 106.105%;
+  ascent-override: 97.827624%;
+  descent-override: 20.922671%;
+  line-gap-override: 0;
+}
+
+@font-face {
+  font-family: "fbiOS";
+  font-style: normal;
+  font-weight: 500;
+  src: local("SF Pro Text Medium");
+  size-adjust: 102.5%;
+  ascent-override: 101.268293%;
+  descent-override: 21.658537%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fbPC";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Arial");
+  size-adjust: 107.5%;
+  ascent-override: 96.55814%;
+  descent-override: 20.651163%;
+  line-gap-override: 0;
+}
+
+/* w700 */
+
+@font-face {
+  font-family: "fbAndroid";
+  font-style: normal;
+  src: local("Roboto Bold");
+  font-weight: 700;
+  size-adjust: 107.51%;
+  ascent-override: 96.549158%;
+  descent-override: 20.649242%;
+  line-gap-override: 0;
+}
+
+@font-face {
+  font-family: "fbiOS";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SF Pro Text Bold");
+  size-adjust: 99.88%;
+  ascent-override: 103.92471%;
+  descent-override: 22.226672%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fbPC";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Arial Bold");
+  size-adjust: 100.9%;
+  ascent-override: 102.874133%;
+  descent-override: 22.001982%;
+  line-gap-override: 0;
+}
+
+/* w800 */
+
+@font-face {
+  font-family: "fbAndroid";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Roboto Black");
+  size-adjust: 107.41%;
+  ascent-override: 96.639047%;
+  descent-override: 20.668467%;
+  line-gap-override: 0;
+}
+
+@font-face {
+  font-family: "fbiOS";
+  font-style: normal;
+  font-weight: 800;
+  src: local("SF Pro Text Heavy");
+  size-adjust: 97.1%;
+  ascent-override: 106.900103%;
+  descent-override: 22.863028%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fbPC";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Arial Black");
+  size-adjust: 87.8%;
+  ascent-override: 118.223235%;
+  descent-override: 25.284738%;
+  line-gap-override: 0%;
+}

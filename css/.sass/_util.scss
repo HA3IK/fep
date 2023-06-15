@@ -1,0 +1,24 @@
+// Front-end dev utilities
+//
+// @author HA3IK [Nazar Holubovskyy] <golubha3ik@gmail.com>
+// @version 1.1.0
+
+
+@use "sass:math";
+
+
+// px to rem/em etc, with default font-size 16px
+@function px2x($px, $unit: rem, $size: 16, $fract: 4) {
+  $result: calc($px / $size);
+  @if $unit =='%' {
+    $result: calc($result * 100);
+  }
+  @return round-fraction($result, $fract)+$unit;
+}
+
+
+// Round a number with fractional part
+@function round-fraction($number, $fraction: 4) {
+  $fraction: math.pow(10, $fraction);
+  @return #{calc(round($number * $fraction) / $fraction)};
+}

@@ -7,8 +7,8 @@
 $px-2: 0.125rem; // ~2px
 $px-25: 1.5625rem; // ~25px
 $px-280: 17.5rem; // ~280px
-$px-480: 30rem; // ~480px
-$px-481: 30.05rem; // ~481px
+$px-510: 31.9rem; // ~510px
+$px-511: 31.9375rem; // ~511px
 $px-780: 48.75rem; // ~780px
 $color-white: #fff;
 $color-grey: #f2f2f2;
@@ -87,6 +87,7 @@ body {
   font: 700 266.6667%/1.2 'Big Shoulders Display', Haettenschweiler, Impact, cursive;
   margin-bottom: $px-25;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .desc {
@@ -163,7 +164,7 @@ body {
 }
 
 // 780-481px
-@media (min-width: $px-481) and (max-width: $px-780) {
+@media (min-width: $px-511) and (max-width: $px-780) {
   .col {
     padding: 6.547%;
   }
@@ -174,7 +175,7 @@ body {
 }
 
 // <= 480px
-@media (max-width: $px-480) {
+@media (max-width: $px-510) {
   .row {
     display: block;
     margin: 23.457% 6.399%;

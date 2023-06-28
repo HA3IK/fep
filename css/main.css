@@ -151,6 +151,7 @@ main {
 :root,
 body {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 :root {
@@ -169,7 +170,6 @@ body {
 
 body {
   font-size: 112.5%;
-  height: 100vh;
   line-height: 1.5556;
 }
 
@@ -186,6 +186,10 @@ body {
   flex-direction: column;
 }
 
+.col-main {
+  height: 100%;
+}
+
 .row-stretch {
   flex: 1;
 }
@@ -196,13 +200,7 @@ body {
 }
 
 .content {
-  padding: 0 5.9524%;
-}
-
-.logo {
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1;
+  margin: 0 5.9524%;
 }
 
 .btn {
@@ -222,6 +220,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .bar .btn {
@@ -255,7 +259,7 @@ body {
 }
 
 .intro-verbal {
-  flex: 0 28.5625rem;
+  flex: 0 28.75rem;
   margin-bottom: 1.9375rem;
 }
 
@@ -269,7 +273,7 @@ body {
 
 .intro-txt {
   margin-bottom: 2.5rem;
-  max-width: 97.3742%;
+  max-width: 96.9565%;
 }
 
 .intro .btn {
@@ -323,7 +327,6 @@ body {
   box-shadow: 0 2.125rem 3.375rem rgba(6, 22, 141, 0.158854);
   padding: 1.25rem 1.5rem;
   position: absolute;
-  white-space: nowrap;
 }
 
 .intro-stats > dt {
@@ -338,8 +341,6 @@ body {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 3.125rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .stats-hours {
@@ -434,7 +435,6 @@ body {
 .footer {
   color: #fff;
   padding: 2rem 0;
-  text-align: center;
 }
 
 .footer .btn {
@@ -455,7 +455,7 @@ body {
   border-top: 0.125rem solid #fff;
   display: inline-block;
   font-size: 74%;
-  padding: 1rem 2rem 0;
+  padding: 1rem 2rem 0 1rem;
 }
 
 .attribution a {
@@ -484,10 +484,7 @@ body {
     line-height: 1.625;
   }
   .content {
-    padding: 0 5.1433%;
-  }
-  .logo {
-    font-size: 1.75rem;
+    margin: 0 5.1433%;
   }
   .bar .btn {
     padding: 0.5625rem 0 0.6875rem;
@@ -495,6 +492,9 @@ body {
   }
   .header {
     margin-bottom: 1.6106rem;
+  }
+  .logo {
+    font-size: 1.75rem;
   }
   .intro {
     margin-bottom: 10.0438rem;
@@ -574,7 +574,7 @@ body {
 }
 @media (max-width: 33.75rem) {
   .content {
-    padding: 0 4.2667%;
+    margin: 0 4.2667%;
   }
   .header {
     margin-bottom: 1.375rem;

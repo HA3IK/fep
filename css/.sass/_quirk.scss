@@ -1,0 +1,27 @@
+
+/**
+ * Quirks mode
+ */
+
+//  IE10+
+
+@media (-ms-high-contrast: none) {
+  .intro-verbal {
+    flex-shrink: 1;
+    margin-bottom: px2x(31); // Adjustment according to design
+  }
+
+  @include ie-course-width($course-width);
+}
+
+//  IE10+ AND <= 860 (Tablet)
+
+@media (-ms-high-contrast: none) and (max-width: px2x($wrap-width-tab)) {
+  @include ie-course-width($course-width-tab);
+}
+
+//  IE10+ AND <= 540 (Mobile)
+
+@media (-ms-high-contrast: none) and (max-width: px2x($wrap-width-mob)) {
+  @include ie-course-width(100%);
+}

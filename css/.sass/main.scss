@@ -1,36 +1,51 @@
 // Utilities
-@use 'util' as *;
 @use "sass:math";
+@use 'util' as *;
 
 
 // Vars
-$main-width: 1110;
-$main-width-tab: 689; // Tablet content width
+// Color
+$blue-dark: #13183f;
+$pink: #f74780;
+$white: #fff;
+// Gradient
+$gradient-blue-pink: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+$gradient-footer-btn: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+$gradient-orange-pink: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+// Main
+$font-size: 18;
+$main-width: 1110; // Content width
 $main-margin: 75;
 $wrap-width: $main-width + $main-margin * 2;
-$wrap-width-tab: 860; // Tablet breakpoint
-$wrap-width-mob: 540; // Mobile breakpoint
-$wrap-width-s: 300; // Small displays breakpoint: folds, smart watch etc.
+// Header
 $header-padding: 24;
-$header-padding-mob: 16;
-$footer-padding: 32;
-$footer-padding-tab: 36; // >= Tablet
+// Intro
 $intro-verbal-width: 460;
 $intro-visual-width: 317;
-$intro-visual-width-mob: 253;
 $intro-visual-height: 560;
 $intro-visual-radius: calc($intro-visual-width / 2);
 $intro-visual-attach-height: 1008;
 $intro-visual-attach-x: $intro-visual-radius; // = R
 $intro-visual-attach-y: calc($intro-visual-radius / 2 * math.sin(45)); // (R/2) sin 45
-$intro-visual-delta: 1.46393; // Δ (PC, Tablet)
-
-$blue-dark: #13183f;
-$pink: #f74780;
-$white: #fff;
-
-$gradient-footer-btn: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
-$gradient-orange-pink: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+// Courses
+$course-width: px2x(350, '%', $main-width);
+$course-margin-bottom: 80;
+$course-icon-size: 56;
+// Footer
+$footer-padding: 32;
+$footer-padding-d2: calc($footer-padding / 2);
+// Tablet
+$wrap-width-tab: 860; // Breakpoint
+$main-width-tab: 689; // Content width
+$course-margin-bottom-tab: 56;
+$course-width-tab: px2x(339, '%', $main-width-tab);
+$footer-padding-tab: 36;
+// Mobile
+$wrap-width-mob: 540; // Breakpoint
+$header-padding-mob: 16;
+$intro-visual-width-mob: 253;
+// Small display (>= 170): folds, smart watch etc.
+$wrap-width-s: 300; // Breakpoint
 
 
 // Import partials
@@ -43,8 +58,8 @@ $gradient-orange-pink: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
 
 :root,
 body {
+  height: 100%;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 :root {
@@ -62,8 +77,8 @@ body {
 }
 
 body {
-  font-size: px2x(18, '%');
-  line-height: px2x(28, '', 18);
+  font-size: px2x($font-size, '%');
+  line-height: px2x(28, '', $font-size);
 }
 
 // Screen hider
@@ -80,12 +95,12 @@ body {
   flex-direction: column;
 }
 
-.col-main {
-  height: 100%;
+.row {
+  flex: 0 0 auto;
 }
 
 .row-stretch {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 .wrapper {
@@ -95,7 +110,6 @@ body {
 
 .content {
   margin: 0 px2x($main-margin, '%', $wrap-width);
-  // padding: 0 px2x($main-margin, '%', $wrap-width);
 }
 
 .btn {
@@ -136,8 +150,6 @@ body {
 .header {
   margin-bottom: px2x(calc(87 - $header-padding));
   padding: px2x($header-padding) 0;
-  // padding-top: px2x($header-padding);
-  // padding-bottom: px2x($header-padding);
 }
 
 .header .logo {
@@ -160,6 +172,8 @@ body {
   justify-content: space-between;
   margin-bottom: px2x(134);
 }
+
+// Intro/Verbal
 
 .intro-verbal {
   flex: 0 px2x($intro-verbal-width);
@@ -189,19 +203,35 @@ body {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), $gradient-orange-pink;
 }
 
+// Intro/Visual
+
 .intro-visual {
-  flex: 0;
+  flex: 0 0 auto;
   margin: 0 px2x(54, '%', $main-width);
   position: relative;
 }
 
+.intro-img-attach,
+.intro-img-cover {
+  border-radius: px2x($intro-visual-radius);
+  width: px2x($intro-visual-width);
+}
+
+.intro-img-attach {
+  background: $gradient-blue-pink;
+  bottom: 0;
+  height: px2x($intro-visual-attach-height);
+  left: 0;
+  position: absolute;
+  transform: rotate(45deg) translate(-#{px2x($intro-visual-attach-x)}, -#{px2x($intro-visual-attach-y)});
+  transform-origin: bottom left;
+}
+
 .intro-img-cover {
   background: $gradient-orange-pink;
-  border-radius: px2x($intro-visual-radius);
   height: px2x($intro-visual-height);
   overflow: hidden;
   position: relative;
-  width: px2x($intro-visual-width);
 }
 
 .intro-img {
@@ -212,17 +242,7 @@ body {
   width: px2x(350, '%', $intro-visual-width);
 }
 
-.intro-img-attach {
-  background: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
-  border-radius: px2x($intro-visual-radius);
-  bottom: 0;
-  height: px2x($intro-visual-attach-height);
-  left: 0;
-  position: absolute;
-  transform: rotate(45deg) translate(-#{px2x($intro-visual-attach-x)}, -#{px2x($intro-visual-attach-y)});
-  transform-origin: bottom left;
-  width: px2x($intro-visual-width);
-}
+// Intro/Visual/Stats
 
 .intro-stats {
   background: $white;
@@ -268,32 +288,34 @@ body {
 }
 
 .course-list {
-  // b/c
-  grid-gap: px2x(80) px2x(30);
-  // basic
-  display: grid;
-  gap: px2x(80) px2x(30);
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: px2x(140);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: px2x(calc(140 - $course-margin-bottom));
 }
 
+.course-list-title,
 .course {
-  background: $white;
   border-radius: px2x(15);
-  box-shadow: 0 px2x(25) px2x(50) rgba(6, 22, 141, 0.0442381);
-  display: flex;
-  flex-direction: column;
+  flex: 0 $course-width;
+  margin-bottom: px2x($course-margin-bottom);
   padding: px2x(64) px2x(32) px2x(40);
-  position: relative;
 }
 
 .course-list-title {
   background: $gradient-orange-pink;
-  box-shadow: none; // Reset .course
   color: $white;
   font-size: px2x(32);
   font-weight: 800;
   line-height: px2x(40);
+}
+
+.course {
+  background: $white;
+  box-shadow: 0 px2x(25) px2x(50) rgba(6, 22, 141, 0.0442381);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .course-title,
@@ -310,7 +332,7 @@ body {
 }
 
 .course-txt {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 .course-link {
@@ -331,11 +353,11 @@ body {
   background: $gradient-orange-pink;
   border-radius: 50%;
   display: flex;
-  height: px2x(56);
+  height: px2x($course-icon-size);
   justify-content: center;
   position: absolute;
   top: -#{px2x(24)};
-  width: px2x(56);
+  width: px2x($course-icon-size);
 }
 
 // FOOTER
@@ -346,8 +368,6 @@ body {
 .footer {
   color: $white;
   padding: px2x($footer-padding) 0;
-  // padding-bottom: px2x($footer-padding);
-  // padding-top: px2x($footer-padding);
 }
 
 .footer .btn {
@@ -371,7 +391,7 @@ body {
   border-top: px2x(2) solid $white;
   display: inline-block;
   font-size: 74%;
-  padding: px2x(calc($footer-padding / 2)) px2x($footer-padding) 0 px2x(calc($footer-padding / 2));
+  padding: px2x($footer-padding-d2) px2x($footer-padding) 0 px2x($footer-padding-d2);
 }
 
 .attribution a {
@@ -383,271 +403,6 @@ body {
   cursor: inherit;
 }
 
-// Media-queries
 
-// >= 1930
-@media (min-width: px2x(1930)) {
-  .intro-img-attach {
-    height: px2x(1280);
-  }
-}
-
-// <= 980
-@media (max-width: px2x(980)) {
-  .stats-hours {
-    bottom: 2rem;
-    left: -#{px2x(100)};
-  }
-}
-
-// <= 860
-@media (max-width: px2x($wrap-width-tab)) {
-  body {
-    font-size: px2x(16);
-    line-height: px2x(26, '');
-  }
-
-  .content {
-    margin: 0 px2x(44.232, '%', $wrap-width-tab);
-  }
-
-  .bar .btn {
-    padding: px2x(9) 0 px2x(11);
-    width: px2x(140);
-  }
-
-  // HEADER
-
-  .header {
-    margin-bottom: px2x(calc(49.77 - $header-padding));
-  }
-
-  .logo {
-    font-size: px2x(28);
-  }
-
-  // Intro
-
-  .intro {
-    margin-bottom: px2x(160.7);
-  }
-
-  .intro-verbal {
-    flex-basis: px2x(398);
-    margin-bottom: 0;
-  }
-
-  .intro-title {
-    font-size: px2x(40);
-    line-height: px2x(50);
-    margin-bottom: px2x(25);
-  }
-
-  .intro-txt {
-    margin-bottom: px2x(24);
-    max-width: 100%;
-  }
-
-  .intro .btn {
-    padding: px2x(15) 0;
-  }
-
-  .intro-visual {
-    margin: 0 px2x(41.15, '%', $main-width-tab) 0 px2x(20, '%', $main-width-tab);
-  }
-
-  .intro-img-cover {
-    height: px2x(calc($intro-visual-height / $intro-visual-delta));
-    width: px2x(calc($intro-visual-width / $intro-visual-delta));
-  }
-
-  .intro-img-attach {
-    height: px2x(calc($intro-visual-attach-height / $intro-visual-delta));
-    transform: rotate(45deg) translate(-#{px2x(calc($intro-visual-attach-x / $intro-visual-delta))}, -#{px2x(calc($intro-visual-attach-y / $intro-visual-delta))});
-    width: px2x(calc($intro-visual-width / $intro-visual-delta));
-  }
-
-  .intro-stats {
-    border-radius: px2x(10);
-    padding: px2x(16) px2x(20);
-  }
-
-  .intro-stats>dt {
-    font-size: px2x(14);
-    margin-bottom: 0;
-  }
-
-  .intro-stats>dd {
-    font-size: px2x(32);
-    line-height: px2x(40);
-  }
-
-  .stats-hours {
-    bottom: -#{px2x(38)};
-    left: -#{px2x(45.3)};
-    width: px2x(155);
-  }
-
-  .stats-members {
-    right: -#{px2x(51.15)};
-    top: -#{px2x(13.8)};
-    width: px2x(105);
-  }
-
-  .course-list {
-    // b/c
-    grid-gap: px2x(56) px2x(10);
-    // basic
-    gap: px2x(56) px2x(10);
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: px2x(86);
-  }
-
-  .course {
-    border-radius: px2x(10);
-    padding: px2x(56) px2x(21) px2x(32) px2x(32);
-  }
-
-  .course-list-title {
-    font-size: px2x(24);
-    line-height: px2x(32);
-  }
-
-  .course-title {
-    font-size: px2x(20);
-    line-height: px2x(25);
-    margin-bottom: px2x(16);
-  }
-
-  .footer {
-    padding: px2x($footer-padding-tab) 0;
-  }
-}
-
-// <= 540
-@media (max-width: px2x($wrap-width-mob)) {
-  .content {
-    margin: 0 px2x(23.0402, '%', $wrap-width-mob);
-  }
-
-  .header {
-    margin-bottom: px2x(calc(38 - $header-padding-mob));
-    padding: px2x($header-padding-mob) 0;
-  }
-
-  .intro {
-    display: block;
-    margin-bottom: px2x(90);
-  }
-
-  .intro-verbal {
-    margin-bottom: px2x(70);
-  }
-
-  .intro-title {
-    margin-bottom: px2x(26);
-  }
-
-  .intro-visual,
-  .intro-img-cover {
-    height: px2x($intro-visual-width-mob);
-    width: px2x($intro-visual-width-mob);
-  }
-
-  .intro-visual {
-    margin: 0 auto;
-  }
-
-  .intro-img-cover {
-    text-align: center;
-  }
-
-  .intro-img-attach {
-    display: none;
-  }
-
-  .intro-img {
-    position: relative;
-    top: px2x(16);
-    width: px2x(238.72, '%', $intro-visual-width-mob);
-  }
-
-  .stats-hours {
-    bottom: -#{px2x(24)};
-    left: -#{px2x(37)};
-  }
-
-  .stats-members {
-    right: -#{px2x(37)};
-    top: -#{px2x(24)};
-  }
-
-  .course-list {
-    display: block;
-    margin-bottom: px2x(80);
-  }
-
-  .course {
-    padding: px2x(56) px2x(29) px2x(32) px2x(28);
-    margin-bottom: px2x(40);
-  }
-
-  .course-list-title {
-    padding: px2x(24) px2x(29) px2x(32) px2x(28);
-  }
-}
-
-// <= 300
-@media (max-width: px2x($wrap-width-s)) {
-  .stats-members {
-    right: -#{px2x(20)};
-    top: -#{px2x(52)};
-  }
-
-  .stats-hours {
-    bottom: -#{px2x(36)};
-    left: -#{px2x(20)};
-  }
-
-  .course {
-    padding-left: px2x(28, '%', $wrap-width-s);
-    padding-right: px2x(28, '%', $wrap-width-s);
-  }
-}
-
-// <= 280
-@media (max-width: px2x(280)) {
-  .content {
-    padding-left: 0 6%;
-  }
-
-  .intro-visual,
-  .intro-img-cover {
-    width: 100%;
-  }
-
-  .bar {
-    flex-direction: column;
-  }
-
-  .bar .btn {
-    margin-top: 1rem;
-  }
-}
-
-// <= 220
-@media (max-width: px2x(220)) {
-  .intro .btn {
-    width: 100%;
-  }
-
-  .stats-members {
-    top: -#{px2x(64)};
-  }
-
-  .intro-img {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
-}
+// Import partials
+@import 'media', 'quirk';

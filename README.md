@@ -66,30 +66,17 @@ Implemented by a Description List and valid wrapping of each group in a DIV.
 </dl>
 ```
 
-### HTML validator error ([again](https://github.com/HA3IK/fep/blob/four-card-feature-section/README.md#semantics-of-the-complex-header))
+### SVG with all different sizes - all in one
 
-The official W3C validator, which is also referred to by WHATWG, reports errors that are not errors according to the official WHATWG Living Standard <time datetime="2023-06-27">27 June 2023</time>.
+All the icons of this challenge are different sizes: 23x24, 18x18, 20x18, 16x16, 18x21 🙃  
+✅ Added all the icons into a single SVG with a personal `viewBox` for each, which also acts as a `:target` to navigate and display the desired (next) icon: `view:target+.icon`
 
-⚠️ Don't blindly trust "The Nu Html Checker" - its database is out of date.
-
-"Not allowed `fetchpriority` and `imagesrcset` attributes on element `link`" and omitted `href` or non-existing `resource` attributes.
-
-![LINK fetchpriority and imagesrcset not allowed](_challenge/screenshot/validator-link-preload.png)
-![LINK omitted attributes](_challenge/screenshot/validator-link-preload-omitted.png)
-
-But if you look at the WHATWG Living Standard in the list of Link attributes, they are there (except `resource` 😅), and `href` is optional.
-
-![LINK attributes](_challenge/screenshot/whatwg-link-attributes.png)
-![LINK optional href](_challenge/screenshot/whatwg-link-href.png)
-
-\+ even WHATWG Living Standard example:
-
-![LINK preload example](_challenge/screenshot/whatwg-example-link-imagesrcset.png)
-
-This validator is completely unaware of the existence of the `fetchpriority` attribute:
-
-![IMG fetchpriority not allowed](_challenge/screenshot/validator-img-fetchpriority.png)
-![IMG attributes](_challenge/screenshot/whatwg-img-attributes.png)
+```svg
+<view id="animation" viewBox="0 0 23 24" />
+<path class="icon" d="..." />
+<view id="business" viewBox="0 0 18 21" />
+<path class="icon" d="..." />
+```
 
 ### List of courses
 
@@ -111,6 +98,31 @@ This validator is completely unaware of the existence of the `fetchpriority` att
 </nav>
 ```
 
+### HTML validator error ([again](https://github.com/HA3IK/fep/blob/four-card-feature-section/README.md#semantics-of-the-complex-header))
+
+The official W3C validator, which is also referred to by WHATWG, reports errors that are not errors according to the official WHATWG Living Standard <time datetime="2023-06-27">27 June 2023</time>.
+
+⚠️ Don't blindly trust "The Nu Html Checker" - its database is out of date.
+
+"Not allowed `fetchpriority` and `imagesrcset` attributes on element `link`" and omitted `href` or non-existing `resource` attributes.
+
+![LINK fetchpriority and imagesrcset not allowed](_challenge/screenshot/validator-link-preload.png)
+![LINK omitted attributes](_challenge/screenshot/validator-link-preload-omitted.png)
+
+But if you look at the WHATWG Living Standard in [the list of Link attributes](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element:concept-element-attributes), they are there (except `resource` 😅), and `href` is optional.
+
+![LINK attributes](_challenge/screenshot/whatwg-link-attributes.png)
+![LINK optional href](_challenge/screenshot/whatwg-link-href.png)
+
+\+ even WHATWG Living Standard example:
+
+![LINK preload example](_challenge/screenshot/whatwg-example-link-imagesrcset.png)
+
+This validator is completely unaware of the existence of the `fetchpriority` attribute:
+
+![IMG fetchpriority not allowed](_challenge/screenshot/validator-img-fetchpriority.png)
+![IMG attributes](_challenge/screenshot/whatwg-img-attributes.png)
+
 ### Lighthouse
 
 ✅ See the [Lighthouse report (for mobile)](https://ha3ik.github.io/fep/skilled-elearning-landing-page/_challenge/lighthouse-report-mob.html) here.
@@ -119,10 +131,11 @@ This validator is completely unaware of the existence of the `fetchpriority` att
 
 ### Built with
 
-- Flex/Grid and a bit of trigonometry.
+- Flexbox and a bit of trigonometry.
 - HTML: Semantic and compliant with the WHATWG "Living Standard", WAI-ARIA…
 - CSS: Responsive, rem perfect 😎👍, fallback font-faces…
 - Performance: hints, minification, versioned URLs…
+- Works fine in IE10+ and relative versions of other browsers (I'm really sorry, the progress 😇!) …
   …
 
 ### Author

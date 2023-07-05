@@ -1,0 +1,28 @@
+
+/**
+ * Quirks mode
+ */
+
+
+// Chrome - Fix autofill background and text colors
+input:-webkit-autofill {
+  transition-delay: 7200s; // 2 hours
+  transition-property: background-color, color;
+}
+
+// Firefox - Reset button on focus
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+
+//  IE10+
+
+@media (-ms-high-contrast: none) {
+
+  // Hide clear button on inputs
+  ::-ms-clear {
+    display: none;
+  }
+}

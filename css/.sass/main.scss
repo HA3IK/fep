@@ -1,0 +1,238 @@
+// Utilities
+@use 'util' as *;
+
+
+// Vars
+$border-radius: 28;
+$border-radius-d2: calc($border-radius / 2);
+$color-bg: #121725;
+$color-green: #54e6af;
+$color-white: #fff;
+$dot-height: 104;
+$font-size: 18;
+$icons-width: 536;
+$logo-height: 56;
+// Form
+$error-font-size: 12;
+$error-line-height: 14;
+$form-bg: #2c344b;
+$form-indent-left: 32;
+$form-padding: 5;
+$form-width: 427;
+// Mobile
+$mob-font-size: 15;
+$mob-padding: 24;
+$mob-title-size: 26;
+$mob-width: 375;
+$mob-width-max: 380;
+// Tablet
+$tablet-logo-margin: 152;
+$tablet-padding: 39;
+$tablet-title-size: 48;
+$tablet-width: 768;
+$tablet-width-620: 620;
+$tablet-width-max: 880;
+// Desktop
+$desk-width: 1440;
+$desk-width-min: calc($tablet-width-max + 0.6);
+
+
+// Import partials
+@import 'font', 'reset';
+
+
+/**
+ * Main CSS
+ */
+
+:root {
+  // b/c
+  word-wrap: break-word;
+  // basic
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  background: $color-bg;
+  color: #c2cbe5;
+  font: 100 100% 'Chivo', 'fb-Android', 'fb-Apple', 'fb-PC', sans-serif;
+  min-width: px2x(170);
+  overflow-wrap: anywhere;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: px2x($font-size, '%');
+  line-height: px2x(28, '', $font-size);
+  margin: 0 auto;
+  max-width: px2x(1920);
+}
+
+.contain {
+  padding: px2x(102) 0 px2x(40, '%', $desk-width) px2x(165, '%', $desk-width);
+}
+
+.main {
+  background-image: url('../img/bg-pattern-dots.svg?v=1.0.0'), url('../img/1x/desk-bg-img.jpg?v=1.0.0');
+  background-origin: padding-box, content-box;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: px2x(232) px2x(104), px2x(888) auto;
+  padding-bottom: px2x(calc($dot-height / 2));
+}
+
+.dpr-2 .main {
+  background-image: url('../img/bg-pattern-dots.svg?v=1.0.0'), url('../img/2x/desk-bg-img.jpg?v=1.0.0');
+}
+
+.dpr-3 .main {
+  background-image: url('../img/bg-pattern-dots.svg?v=1.0.0'), url('../img/3x/desk-bg-img.jpg?v=1.0.0');
+}
+
+.dpr-4 .main {
+  background-image: url('../img/bg-pattern-dots.svg?v=1.0.0'), url('../img/4x/desk-bg-img.jpg?v=1.0.0');
+}
+
+.logo {
+  margin-bottom: px2x(103);
+  // width: px2x(135);
+  height: px2x($logo-height);
+}
+
+.content {
+  background: $color-bg;
+  max-width: px2x(723);
+  padding: px2x(88) px2x(58) 0 0;
+}
+
+.title {
+  color: $color-green;
+  font-size: px2x(52);
+  font-weight: inherit;
+  line-height: px2x(62);
+  margin-bottom: px2x(24);
+  text-transform: uppercase;
+}
+
+.title>em {
+  color: $color-white;
+  font-style: inherit;
+}
+
+.txt {
+  margin-bottom: px2x(40);
+  max-width: px2x(445);
+}
+
+// Form
+
+.form,
+.form-btn {
+  border-radius: px2x($border-radius);
+}
+
+.form {
+  background: $form-bg;
+  display: inline-flex;
+  font-size: px2x(14);
+  font-weight: 700;
+  margin-bottom: px2x(64);
+  padding: px2x($form-padding);
+  position: relative;
+  width: px2x($form-width);
+}
+
+.form-input {
+  background: transparent;
+  caret-color: $color-green;
+  color: $color-white;
+  flex: 1 1 auto;
+  margin: 0 px2x(calc($form-indent-left - 12), '%', $form-width) 0 px2x(calc($form-indent-left - $form-padding), '%', $form-width);
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: px2x(1) solid $color-green;
+}
+
+.form-input::placeholder {
+  color: #969aa5;
+}
+
+.form-btn {
+  background: $color-green;
+  color: $color-bg;
+  flex: 0 0 auto;
+  line-height: px2x(46);
+  text-transform: capitalize;
+  width: px2x(162);
+}
+
+.form-btn:hover {
+  background: #b3ffe2;
+}
+
+.err-msgs {
+  bottom: -#{px2x($error-line-height + 8)};
+  color: #fb3e3e;
+  font-size: px2x($error-font-size);
+  left: px2x($form-indent-left, '%', $form-width);
+  line-height: px2x($error-line-height, '', $error-font-size);
+  position: absolute;
+}
+
+.err-msg {
+  display: none;
+}
+
+// IF an invalid message occurs
+[aria-errormessage="err-msg-invalid"]~.err-msgs>#err-msg-invalid {
+  display: inline;
+}
+
+// Icons
+
+.icons {
+  font-size: 0;
+  max-width: px2x($icons-width);
+  white-space: nowrap;
+}
+
+.icon-spotify {
+  margin-right: px2x(40, '%', $icons-width);
+  max-width: px2x(96, '%', $icons-width);
+}
+
+.icon-apple {
+  margin-right: px2x(41, '%', $icons-width);
+  max-width: px2x(78, '%', $icons-width);
+}
+
+.icon-google {
+  margin-right: px2x(27, '%', $icons-width);
+  max-width: px2x(125, '%', $icons-width);
+}
+
+.icon-pocket {
+  max-width: px2x(129, '%', $icons-width);
+}
+
+
+// (Out of the challenge) FOOTER: Attribution
+
+.attribution {
+  font-size: px2x(12);
+  color: $color-green;
+}
+
+.attribution a {
+  color: $color-white;
+  white-space: nowrap;
+}
+
+.attribution abbr {
+  cursor: inherit;
+}
+
+
+// Import partials
+@import 'media', 'quirk';

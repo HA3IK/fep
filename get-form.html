@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let's pretend, you've been granted an access by email</title>
+  <meta name="description" content="Fake form receiver as addition to 'Pod request access landing page' solution">
+  <meta name="author" content="HA3IK [Nazar Holubovskyy] (golubha3ik@gmail.com)">
+  <!-- Robots -->
+  <meta name="robots" content="noarchive, nofollow, noindex, nosnippet">
+  <!-- Security -->
+  <meta http-equiv="content-security-policy" content="base-uri 'self'; child-src 'none'; default-src 'self'; form-action 'none'; object-src 'none'; script-src 'self' 'sha256-zAeh1VgOXRCjDZyQkzaFXFoMmBNh50LQljncQ/1Sriw='; style-src 'self' 'sha256-373CARAE+o7PclKUwrOOwIMvxBpB+0CXVDgcvDYtaBI='; upgrade-insecure-requests;">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png?v=1.0.0">
+  <!-- Styles -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      background: #121725;
+      color: #c2cbe5;
+      font: 125%/1.6 Arial, sans-serif;
+      text-align: center;
+    }
+
+    body {
+      max-width: 100%;
+      padding: 2rem 1rem;
+    }
+
+    .title,
+    .msg {
+      margin-bottom: 1em;
+    }
+
+    .email,
+    .link,
+    .title {
+      color: #54e6af;
+    }
+
+    .title {
+      font-size: 200%;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .link {
+      text-transform: capitalize;
+    }
+  </style>
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      'use strict';
+
+      let email = '';
+      const EMAIL_REGEX = /^\w[-\w\.]+\w@\w[-\w\.]+\w$/;
+
+      // Get email from URL
+      if (window.URLSearchParams) {
+        const URL_PARAMS = new URLSearchParams(window.location.search);
+        email = URL_PARAMS.get('access_email');
+      } else {
+        const URL_PARAMS = decodeURIComponent(window.location.search).match(/access_email=([^&]+)/);
+        email = URL_PARAMS ? URL_PARAMS[1] : '';
+      }
+
+      // IF not empty AND valid THEN set email to output
+      if (email && EMAIL_REGEX.test(email)) {
+        const output = document.querySelector('.email');
+        output.innerText = email;
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <h1 class="title">Let's pretend!</h1>
+  <p class="msg">Уou've been granted access by email:<br><output class="email">placeholder@mail.com</output></p>
+  <p class="msg">Congratulations!🥳</p>
+  <a class="link" href="index.html">← Way back</a>
+</body>
+
+</html>

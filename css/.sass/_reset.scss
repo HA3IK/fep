@@ -1,0 +1,61 @@
+
+/**
+ * Reset CSS
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+abbr {
+  text-decoration: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+}
+
+address {
+  font-style: normal;
+}
+
+button,
+input {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+input {
+  outline: 0;
+}
+
+input::placeholder {
+  opacity: 1;
+}
+
+main {
+  display: block;
+}

@@ -1,0 +1,73 @@
+/**
+ * Fallback fonts
+ */
+
+// w400
+
+@font-face {
+  font-family: "fb-PC";
+  src: local("Arial"), local("Arial Regular");
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 110.284933%;
+  ascent-override: 90.674217%;
+  descent-override: 22.668554%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Android";
+  src: local("Roboto"), local("Roboto Regular");
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 109.910014%;
+  ascent-override: 90.98352%;
+  descent-override: 22.74588%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Apple";
+  src: local("SF Pro Text"), local("SF Pro Text Regular");
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 106.982414%;
+  ascent-override: 93.473307%;
+  descent-override: 23.368327%;
+  line-gap-override: 0%;
+}
+
+// w700
+
+@font-face {
+  font-family: "fb-PC";
+  src: local("Arial Bold");
+  font-style: normal;
+  font-weight: 700;
+  size-adjust: 72.583392%;
+  ascent-override: 135.568203%;
+  descent-override: 29.345556%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Android";
+  src: local("Roboto Bold");
+  font-style: normal;
+  font-weight: 700;
+  size-adjust: 77.211221%;
+  ascent-override: 127.442616%;
+  descent-override: 27.586664%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Apple";
+  src: local("SF Pro Text Bold");
+  font-style: normal;
+  font-weight: 700;
+  size-adjust: 71.252404%;
+  ascent-override: 138.100604%;
+  descent-override: 29.893728%;
+  line-gap-override: 0%;
+}

@@ -98,7 +98,7 @@ All the icons of this challenge are different sizes: 23x24, 18x18, 20x18, 16x16,
 </nav>
 ```
 
-### HTML validator error ([again](https://github.com/HA3IK/fep/blob/four-card-feature-section/README.md#semantics-of-the-complex-header))
+### HTML validator error ([again](https://github.com/HA3IK/fep/tree/four-card-feature-section#semantics-of-the-complex-header))
 
 The official W3C validator, which is also referred to by WHATWG, reports errors that are not errors according to the official WHATWG Living Standard <time datetime="2023-06-27">27 June 2023</time>.
 

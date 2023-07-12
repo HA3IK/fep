@@ -58,7 +58,6 @@ $wrap-width-s: 300; // Breakpoint
 
 :root,
 body {
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -70,6 +69,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #83869a;
   font: 500 100% 'Plus Jakarta Sans', fbPC, fbAndroid, fbiOS, sans-serif;
+  height: 100%;
   min-width: px2x(170);
   overflow-wrap: anywhere;
   text-rendering: optimizeSpeed;
@@ -79,6 +79,7 @@ body {
 body {
   font-size: px2x($font-size, '%');
   line-height: px2x(28, '', $font-size);
+  min-height: 100%;
 }
 
 // Screen hider

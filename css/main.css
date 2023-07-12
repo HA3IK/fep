@@ -150,7 +150,6 @@ main {
  */
 :root,
 body {
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -160,6 +159,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #83869a;
   font: 500 100% "Plus Jakarta Sans", fbPC, fbAndroid, fbiOS, sans-serif;
+  height: 100%;
   min-width: 10.625rem;
   overflow-wrap: anywhere;
   text-rendering: optimizeSpeed;
@@ -171,6 +171,7 @@ body {
 body {
   font-size: 112.5%;
   line-height: 1.5556;
+  min-height: 100%;
 }
 
 .scr-hide {
@@ -182,20 +183,16 @@ body {
 }
 
 .col {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
 }
 
 .row {
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .row-stretch {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .wrapper {
@@ -220,14 +217,10 @@ body {
 }
 
 .bar {
-  -ms-flex-align: center;
-      align-items: center;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .logo {
@@ -260,18 +253,14 @@ body {
 }
 
 .intro {
-  -ms-flex-align: center;
-      align-items: center;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 8.375rem;
 }
 
 .intro-verbal {
-  -ms-flex: 0 28.75rem;
-      flex: 0 28.75rem;
+  flex: 0 28.75rem;
   margin-bottom: 1.9375rem;
 }
 
@@ -299,8 +288,7 @@ body {
 }
 
 .intro-visual {
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+  flex: 0 0 auto;
   margin: 0 4.8649%;
   position: relative;
 }
@@ -375,20 +363,16 @@ body {
 }
 
 .course-list {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 3.75rem;
 }
 
 .course-list-title,
 .course {
   border-radius: 0.9375rem;
-  -ms-flex: 0 31.5315%;
-      flex: 0 31.5315%;
+  flex: 0 31.5315%;
   margin-bottom: 5rem;
   padding: 4rem 2rem 2.5rem;
 }
@@ -404,10 +388,8 @@ body {
 .course {
   background: #fff;
   box-shadow: 0 1.5625rem 3.125rem rgba(6, 22, 141, 0.0442381);
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
 
@@ -425,8 +407,7 @@ body {
 }
 
 .course-txt {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .course-link {
@@ -443,15 +424,12 @@ body {
 }
 
 .course-icon {
-  -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
   border-radius: 50%;
-  display: -ms-flexbox;
   display: flex;
   height: 3.5rem;
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   position: absolute;
   top: -1.5rem;
   width: 3.5rem;
@@ -476,8 +454,7 @@ body {
 }
 
 .attribution-wrap {
-  -ms-flex: 100%;
-      flex: 100%;
+  flex: 100%;
   padding-top: 2rem;
 }
 
@@ -534,8 +511,7 @@ body {
     margin-bottom: 10.0438rem;
   }
   .intro-verbal {
-    -ms-flex-preferred-size: 24.875rem;
-        flex-basis: 24.875rem;
+    flex-basis: 24.875rem;
     margin-bottom: 0;
   }
   .intro-title {
@@ -592,8 +568,7 @@ body {
   .course-list-title,
   .course {
     border-radius: 0.625rem;
-    -ms-flex-preferred-size: 49.2017%;
-        flex-basis: 49.2017%;
+    flex-basis: 49.2017%;
     margin-bottom: 3.5rem;
     padding: 3.5rem 1.3125rem 2rem 2rem;
   }
@@ -695,8 +670,7 @@ body {
     margin-right: 8%;
   }
   .bar {
-    -ms-flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
   }
   .bar .btn {
     margin-top: 1rem;
@@ -724,8 +698,7 @@ body {
  */
 @media (-ms-high-contrast: none) {
   .intro-verbal {
-    -ms-flex-negative: 1;
-        flex-shrink: 1;
+    flex-shrink: 1;
     margin-bottom: 1.9375rem;
   }
   .course-list-title,

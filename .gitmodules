@@ -14,3 +14,7 @@
 	path = skilled-elearning-landing-page
 	url = git@github.com:HA3IK/fep.git
 	branch = skilled-elearning-landing-page
+[submodule "pod-request-access-landing-page"]
+	path = pod-request-access-landing-page
+	url = git@github.com:HA3IK/fep.git
+	branch = pod-request-access-landing-page

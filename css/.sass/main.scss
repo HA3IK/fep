@@ -1,0 +1,260 @@
+// Utilities
+@use 'util' as *;
+
+
+// Vars
+$color-blue-dark: #262e38;
+$color-grey-medium: #7c8798;
+$color-orange: #fc7614;
+$color-white: #fff;
+$font-size: 15;
+$icon-size: 48;
+$title-size: 28;
+$btn-font-size: 15;
+// Main
+$main-padding: 32;
+$main-radius: 30;
+$main-width-max: 412;
+// Rating state
+$rate-padding-right: 39;
+$rate-padding: px2x($main-padding, '%', $main-width-max);
+$rate-content-width: calc($main-width-max - $main-padding - $rate-padding-right);
+// Mobile
+$mob-font-size: 14;
+$mob-padding: 24;
+$mob-width: 375;
+$mob-main-width: calc($mob-width - $mob-padding * 2);
+$mob-main-padding: 24;
+$mob-rate-padding: px2x($mob-main-padding, '%', $mob-main-width);
+$mob-content-width: calc($mob-main-width - $mob-main-padding * 2);
+$mob-btn-line-heigh: 18;
+
+
+// Import partials
+@import 'font', 'reset';
+
+
+/**
+ * Main CSS
+ */
+
+:root {
+  // b/c
+  word-wrap: break-word;
+  // basic
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  background: #131518;
+  color: #969fad;
+  font: 400 100% 'Overpass', 'fb-Android', 'fb-Apple', 'fb-PC', sans-serif;
+  height: 100%;
+  min-width: px2x(170);
+  overflow-wrap: anywhere;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.circle-wrap {
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+.circle {
+  align-items: center;
+  background: $color-blue-dark;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: px2x($font-size, '%');
+  justify-content: center;
+  line-height: px2x(24, '', $font-size);
+  min-height: 100%;
+  padding: px2x($mob-padding, '%', $mob-width);
+}
+
+.main {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: px2x($main-radius);
+  flex: 0 0 auto;
+  margin-top: px2x(6);
+  max-width: px2x($main-width-max);
+}
+
+.title {
+  color: $color-white;
+  font-size: px2x($title-size, '%', $font-size);
+  line-height: px2x(35, '', $title-size);
+}
+
+
+// Rating state
+
+.rate {
+  padding: $rate-padding px2x($rate-padding-right, '%', $main-width-max) $rate-padding $rate-padding;
+}
+
+.circle-icon {
+  fill: $color-orange;
+  margin-bottom: px2x(30.2);
+  padding: px2x(calc($icon-size / 2), '%', $rate-content-width); // The circle size
+}
+
+.icon {
+  height: px2x(16, '%', $icon-size);
+  width: px2x(17, '%', $icon-size);
+}
+
+.rate-title {
+  margin-bottom: px2x(14.8);
+}
+
+.rate-txt {
+  margin-bottom: px2x(24);
+}
+
+// Form
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.circle-rate {
+  margin-bottom: px2x(32);
+  padding: px2x(25.5, '%', $rate-content-width); // The circle size
+}
+
+.rate-radio {
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+
+.rate-label {
+  color: $color-grey-medium;
+  cursor: pointer;
+  font-size: px2x(16, '%', $font-size);
+  padding-top: px2x(font-size-delta(20.8, 16));
+}
+
+.rate-radio:checked+.rate-label {
+  background: $color-grey-medium;
+  color: $color-white;
+}
+
+.rate-label:hover {
+  background: $color-orange;
+  color: $color-white;
+}
+
+// Spatial Navigation measure
+@supports selector(:focus-visible) {
+  .rate-radio:focus-visible+.rate-label {
+    background: $color-orange;
+    color: $color-white;
+  }
+}
+
+.btn-submit {
+  background: $color-orange;
+  border-radius: px2x(22.5);
+  color: $color-white;
+  cursor: pointer;
+  letter-spacing: px2x(2, 'em', $btn-font-size);
+  line-height: 1;
+  min-width: 100%;
+  padding: px2x(13) 0 px2x(17);
+  text-transform: uppercase;
+}
+
+.btn-submit:focus,
+.btn-submit:hover {
+  background: $color-white;
+  color: $color-orange;
+}
+
+
+// Thank you state
+
+.thx {
+  padding: px2x(45, '%', $main-width-max) px2x(32, '%', $main-width-max);
+  text-align: center;
+}
+
+.thx-img {
+  height: 100%;
+  margin-bottom: px2x(32);
+  margin-right: px2x(8);
+  width: px2x(162, '%', calc($main-width-max - $main-padding * 2));
+}
+
+.rate-result {
+  margin-bottom: px2x(38);
+}
+
+.rate-result-txt {
+  background: $color-blue-dark;
+  border-radius: px2x(22.5);
+  color: $color-orange;
+  display: inline-block;
+  font-size: px2x(15, '%', $font-size);
+  line-height: 1;
+  padding: px2x(10) px2x(19.5) px2x(7);
+}
+
+.thx-title {
+  margin-bottom: px2x(9);
+}
+
+.thx-txt {
+  margin-right: px2x(8);
+}
+
+
+// (Out of the challenge) FOOTER: Attribution
+
+.attribution-wrap {
+  flex: 0 0 auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 74%;
+  min-width: 100%;
+  padding: 1.4rem 3% 2rem;
+  position: absolute;
+}
+
+.attribution a {
+  color: $color-orange;
+  white-space: nowrap;
+}
+
+.attribution abbr {
+  cursor: inherit;
+}
+
+
+// Import partials
+@import 'media';

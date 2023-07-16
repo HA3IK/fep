@@ -1,0 +1,53 @@
+
+/**
+ * Reset CSS
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: button;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  outline: 0;
+  overflow: visible;
+}
+
+button:-moz-focusring {
+  outline: 0;
+}
+
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+main {
+  display: block;
+}

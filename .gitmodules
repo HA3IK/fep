@@ -18,3 +18,7 @@
 	path = pod-request-access-landing-page
 	url = git@github.com:HA3IK/fep.git
 	branch = pod-request-access-landing-page
+[submodule "interactive-rating-component"]
+	path = interactive-rating-component
+	url = git@github.com:HA3IK/fep.git
+	branch = interactive-rating-component

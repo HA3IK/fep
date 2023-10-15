@@ -22,3 +22,7 @@
 	path = interactive-rating-component
 	url = git@github.com:HA3IK/fep.git
 	branch = interactive-rating-component
+[submodule "age-calculator-app"]
+	path = age-calculator-app
+	url = git@github.com:HA3IK/fep.git
+	branch = age-calculator-app

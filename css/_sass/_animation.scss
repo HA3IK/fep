@@ -1,0 +1,14 @@
+/**
+ * Animation
+ */
+
+// Show error message
+
+@keyframes fadeInMsg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

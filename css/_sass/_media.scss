@@ -1,0 +1,177 @@
+/**
+ * Media-queries
+ */
+
+// <= 820px
+@media (max-width: px2x(820)) {
+  .btn-row {
+    margin-top: px2x(18);
+  }
+}
+
+// <= 760px
+@media (max-width: px2x(760)) {
+  .output-row {
+    font-size: px2pct(88, $font-size);
+  }
+}
+
+// <= 640px
+@media (max-width: px2x(640)) {
+  body {
+    font-size: 150%;
+  }
+
+  .output-row {
+    font-size: px2pct($output-font-size, $font-size);
+  }
+}
+
+// <= 560px
+@media (max-width: px2x(560)) {
+  .output-row {
+    font-size: px2pct(88, $font-size);
+  }
+}
+
+// <= 480px (mobile)
+
+@media (max-width: px2x(480)) {
+  body {
+    font-size: px2pct($mob-font-size);
+    line-height: px2x(30, "", $mob-font-size);
+  }
+
+  .main {
+    border-bottom-right-radius: $mob-border-bottom-radius;
+    padding: px2em(48, $mob-font-size) px2em(24, $mob-font-size);
+  }
+
+  .date-col + .date-col {
+    margin-left: px2em(16, $mob-font-size);
+  }
+
+  .date-label {
+    font-size: px2pct(12, $mob-font-size);
+    margin-bottom: px2x(4);
+  }
+
+  .date-input {
+    height: px2em(54, $mob-font-size);
+    padding: px2em(12, $mob-font-size) px2em(16, $mob-font-size);
+  }
+
+  .btn-row {
+    justify-content: center;
+    margin: px2em(32, $mob-font-size) 0;
+  }
+
+  .btn {
+    height: $mob-btn-size;
+    width: $mob-btn-size;
+  }
+
+  .btn > img {
+    width: px2pct(25, $mob-btn-d);
+  }
+
+  // (Out of the challenge) FOOTER: Attribution
+
+  .attribution {
+    font-size: px2pct(9, $mob-font-size);
+  }
+
+  .attribution > address {
+    display: block;
+  }
+}
+
+// <= 376px
+
+@media (max-width: px2x($mob-vw)) {
+  body {
+    justify-content: flex-start;
+    padding-top: px2pct(88, $mob-vw);
+  }
+
+  .output-row {
+    font-size: px2pct(56, $mob-font-size);
+  }
+
+  .output {
+    margin-right: 0;
+  }
+}
+
+// <= 374px
+
+@media (max-width: px2x(374)) {
+  body {
+    font-size: px2pct($sm-font-size);
+  }
+
+  .btn-row {
+    margin: px2em(24, $sm-font-size) 0;
+  }
+
+  .btn {
+    height: px2em($sm-btn-d, $sm-font-size);
+    width: px2em($sm-btn-d, $sm-font-size);
+  }
+}
+
+// <= 320px (small display)
+
+@media (max-width: px2x(320)) {
+  body {
+    padding: 6% 4%;
+  }
+
+  .main {
+    border-bottom-left-radius: $mob-border-bottom-radius;
+  }
+
+  .date-row {
+    flex-wrap: wrap;
+    font-size: 110%;
+    justify-content: space-between;
+  }
+
+  .date-col {
+    flex-basis: 48%;
+  }
+
+  .date-col + .date-col {
+    margin-left: 0;
+  }
+
+  .date-col:last-of-type {
+    flex-basis: 100%;
+    margin-top: px2em(16, $sm-font-size);
+  }
+
+  .output-row {
+    text-align: center;
+    white-space: normal;
+  }
+
+  .output {
+    display: block;
+  }
+}
+
+// <= 200px
+
+@media (max-width: px2x(200)) {
+  .date-col {
+    flex-basis: 100%;
+  }
+
+  .date-col + .date-col {
+    margin-top: px2em(16, $sm-font-size);
+  }
+
+  .output-row {
+    font-size: 200%;
+  }
+}

@@ -1,0 +1,60 @@
+/**
+ * Reset CSS
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: button;
+  font-size: inherit;
+}
+
+button::-moz-focus-inner {
+  border-style: none;
+}
+
+button,
+fieldset {
+  border: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+main {
+  display: block;
+}
+
+input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+// Hide the number input's spin box in Webkit and Blink browsers.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  // height: auto;
+}
+
+// Hide the number input's spin box in Firefox.
+input[type="number"] {
+  -moz-appearance: textfield;
+}

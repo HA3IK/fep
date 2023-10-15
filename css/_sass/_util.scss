@@ -1,0 +1,65 @@
+// Front-end dev utilities
+//
+// @author HA3IK [Nazar Holubovskyy] <golubha3ik@gmail.com>
+// @version 2.0.0
+
+@use "sass:math";
+
+/**
+ * px to x unit
+ *
+ * @param {Number} $px - desired size in px
+ * @param {String} $unit - desired unit - %/''/em/rem etc. (default: "rem")
+ * @param {Number} $size - base size in px (default: 16)
+ * @param {Number} $fract - the fractional part
+ * @return {String} - value in x unit with the fractional part
+ */
+
+@function px2x($px, $unit: "rem", $size: 16, $fract: 4) {
+  $result: calc($px / $size);
+
+  @if $unit == "%" {
+    $result: calc($result * 100);
+  }
+
+  $result: round-fraction($result, $fract);
+  @return #{$result + $unit};
+}
+
+/**
+ * px to em
+ *
+ * @param {Number} $px - desired size in px
+ * @param {Number} $font-size - base font-size in px
+ * @param {Number} $fract - the fractional part
+ * @return {String} - value in em with the fractional part
+ */
+
+@function px2em($px, $font-size, $fract: 4) {
+  @return px2x($px, "em", $font-size, $fract);
+}
+
+/**
+ * px to %
+ *
+ * @param {Number} $size - desired size in px
+ * @param {Number} $base - base size in px
+ * @param {Number} $fract - the fractional part
+ * @return {String} - value in % with the fractional part
+ */
+@function px2pct($size, $base: 16, $fract: 4) {
+  @return px2x($size, "%", $base, $fract);
+}
+
+/**
+ * Round a number to a fractional part
+ *
+ * @param {Number} $number - number to round
+ * @param {Number} $fract - the fractional part
+ * @return {Number} - rounded number with the fractional part
+ */
+@function round-fraction($number, $fract: 4) {
+  $fract: math.pow(10, $fract);
+  $result: round($number * $fract);
+  @return calc($result / $fract);
+}

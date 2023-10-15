@@ -1,0 +1,225 @@
+// Utilities
+@use "util" as *;
+
+// Vars
+$color-black: #151515;
+$color-grey-bg: #f0f0f0;
+$color-grey-border: #dcdcdc;
+$color-grey-label: #716f6f;
+$color-grey-placeholder: #898989;
+$color-purple: #854dff;
+$color-red: #ff5959;
+$color-white: #fff;
+$font-size: 32;
+$btn-d: 96;
+$btn-size: px2em($btn-d, $font-size);
+$output-font-size: 104;
+// Mobile
+$mob-font-size: 20;
+$mob-border-bottom-radius: px2em(100, $mob-font-size);
+$mob-btn-d: 64;
+$mob-btn-size: px2em($mob-btn-d, $mob-font-size);
+$mob-vw: 376;
+// Small display
+$sm-btn-d: 68;
+$sm-font-size: 16;
+
+// Import partials
+@import "font", "reset";
+
+/**
+ * Main CSS
+ */
+
+:root {
+  // b/c
+  word-wrap: break-word;
+  // basic
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  background: $color-grey-bg;
+  color: $color-black;
+  font:
+    100% "Poppins",
+    "fb-Android",
+    "fb-Apple",
+    "fb-Win",
+    "fb-LR",
+    sans-serif;
+  height: 100%;
+  overflow-wrap: anywhere;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: px2pct($font-size);
+  justify-content: center;
+  line-height: px2x(48, "", $font-size);
+  min-height: 100%;
+  padding: 2% px2pct(16, $mob-vw);
+}
+
+.main {
+  background: $color-white;
+  border-radius: px2x(24);
+  border-bottom-right-radius: px2x(200);
+  max-width: px2x(840);
+  padding: px2em(56, $font-size);
+  width: 100%;
+}
+
+// Date row
+
+.date-row {
+  display: flex;
+}
+
+.date-col + .date-col {
+  margin-left: px2em(32, $font-size);
+}
+
+.date-col {
+  flex: 0 1 px2x(160);
+}
+
+.date-label {
+  color: $color-grey-label;
+  display: block;
+  font-size: px2pct(14, $font-size);
+  letter-spacing: 0.25em;
+  margin-bottom: px2x(8);
+  text-transform: uppercase;
+}
+
+.date-input {
+  border: px2x(1) solid $color-grey-border;
+  border-radius: px2x(8);
+  cursor: pointer;
+  font-weight: 700;
+  height: px2em(72, $font-size);
+  letter-spacing: 0.01em;
+  padding: px2em(12, $font-size) px2em(24, $font-size);
+  width: 100%;
+}
+
+.date-input:hover,
+.date-input:focus {
+  border-color: $color-purple;
+  caret-color: $color-purple;
+  outline: 0;
+}
+
+// Error state
+
+.date-error .date-label {
+  color: $color-red;
+  transition: color 0.4s ease;
+}
+
+.date-error .date-input {
+  border-color: $color-red;
+  transition: border-color 0.4s ease;
+}
+
+.date-msg-error {
+  color: $color-red;
+  font-size: px2pct(14, $font-size);
+  font-style: italic;
+  font-weight: 400;
+  margin-top: px2x(8);
+  animation: fadeInMsg 0.4s;
+}
+
+// Button row
+
+.btn-row {
+  background: 50% / 100% px2x(1) no-repeat
+    linear-gradient($color-grey-border, $color-grey-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: $color-purple;
+  border-radius: 50%;
+  cursor: pointer;
+  height: $btn-size;
+  transition: background 0.4s ease;
+  width: $btn-size;
+}
+
+.btn > img {
+  height: auto;
+  pointer-events: none;
+  width: px2pct(46, $btn-d);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: $color-black;
+  outline: 0;
+}
+
+// Output row
+
+.output-row {
+  font:
+    800 italic px2pct($output-font-size, $font-size) /
+      px2x(114, "", $output-font-size) "Poppins",
+    "fb-Android",
+    "fb-Apple",
+    "fb-Win",
+    "fb-LR",
+    sans-serif;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/**
+ * "-7.6997" == (138-134.883+8-18.8167)/104 - to fix the difference between Figma and browser (FF, Chrome, Edge)
+ * - Placeholder width: 138px - Figma, ~134.883px - Browser
+ * - Placeholder right margin: 8px - Figma, ~18.8167px - Browser white-space
+ * - Output font-size: 104px
+ */
+.output {
+  color: $color-purple;
+  margin-right: px2em(-7.6997, $output-font-size);
+}
+
+// (Out of the challenge) FOOTER: Attribution
+
+.attribution-wrap {
+  flex: 0 0 auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.attribution {
+  font-size: px2pct(11, $font-size);
+  font-style: italic;
+  min-width: 100%;
+  padding: 0.75rem 0 1rem;
+  position: absolute;
+}
+
+.attribution > address,
+.attribution > p {
+  display: inline;
+}
+
+.attribution a {
+  color: $color-purple;
+  white-space: nowrap;
+}
+
+.attribution abbr {
+  cursor: inherit;
+}
+
+// Import partials
+@import "media", "animation";

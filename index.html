@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontend Mentor | HA3IK | Age calculator app</title>
+    <meta name="description" content="A solution to the 'Age calculator app' challenge on Frontend Mentor" />
+    <meta name="author" content="HA3IK [Nazar Holubovskyy] (golubha3ik@gmail.com)" />
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; child-src 'none'; default-src 'self'; font-src https://fonts.gstatic.com; form-action 'none'; object-src 'none'; style-src 'self' https://fonts.googleapis.com; upgrade-insecure-requests;" />
+    <!-- Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" />
+    <link rel="preload" as="style" href="css/main.min.css?v=1.0.0" />
+    <link rel="preload" as="script" href="js/main.min.js?v=1.0.0" />
+    <link rel="preload" as="image" type="image/svg+xml" imagesrcset="img/icon-arrow-mob.svg?v=1.0.0 25w, img/icon-arrow-pc.svg?v=1.0.0 46w" imagesizes="(max-width: 376px) 25px, 46px" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png?v=1.0.0" />
+    <!-- Style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" />
+    <link rel="stylesheet" href="css/main.min.css?v=1.0.0" />
+    <!-- Script -->
+    <script defer src="js/main.min.js?v=1.0.0"></script>
+  </head>
+  <body>
+    <main class="main">
+      <form action="." autocomplete="off">
+        <!-- Form field -->
+        <fieldset name="date-field" aria-label="Date input fields">
+          <div class="date-row">
+            <div class="date-col">
+              <label class="date-label" for="input-day">Day</label>
+              <input class="date-input" type="number" name="input-day" id="input-day" placeholder="DD" min="1" max="31" required />
+              <p class="date-msg-error" role="alert" hidden></p>
+            </div>
+            <div class="date-col">
+              <label class="date-label" for="input-month">Month</label>
+              <input class="date-input" type="number" name="input-month" id="input-month" placeholder="MM" min="1" max="12" required />
+              <p class="date-msg-error" role="alert" hidden></p>
+            </div>
+            <div class="date-col">
+              <label class="date-label" for="input-year">Year</label>
+              <input class="date-input" type="number" name="input-year" id="input-year" placeholder="YYYY" min="1900" required />
+              <p class="date-msg-error" role="alert" hidden></p>
+            </div>
+          </div>
+          <p class="date-msg-error" role="alert" hidden></p>
+        </fieldset>
+        <!-- Button -->
+        <div class="btn-row">
+          <button class="btn">
+            <img src="img/icon-arrow-pc.svg?v=1.0.0" alt="Calculate" role="img" srcset="img/icon-arrow-mob.svg?v=1.0.0 25w, img/icon-arrow-pc.svg?v=1.0.0 46w" sizes="(max-width: 376px) 25px, 46px" width="44" height="44" />
+          </button>
+        </div>
+        <!-- Output -->
+        <div class="output-row" aria-atomic="true" aria-live="off">
+          <p><output class="output" name="output-year" aria-live="off" aria-label="none">- -</output> <span>years</span></p>
+          <p><output class="output" name="output-month" aria-live="off" aria-label="none">- -</output> months</p>
+          <p><output class="output" name="output-day" aria-live="off" aria-label="none">- -</output> days</p>
+        </div>
+      </form>
+    </main>
+    <!-- (Out of the challenge) Attribution -->
+    <div class="attribution-wrap">
+      <footer class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>.</p>
+        <address>
+          Coded by <a href="https://github.com/ha3ik" rel="me noopener" target="_blank"><abbr title="Nazar Holubovskyy">HA3IK</abbr></a
+          >.
+        </address>
+      </footer>
+    </div>
+  </body>
+</html>

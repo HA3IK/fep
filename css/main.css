@@ -224,6 +224,13 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.scr-hide {
+  overflow: hidden;
+  max-height: 3.125rem;
+  position: absolute;
+  top: -6.25rem;
+}
+
 /**
  * Main CSS
  */
@@ -255,11 +262,16 @@ body {
 
 .main {
   background: #fff;
-  border-radius: 1.5rem;
   border-bottom-right-radius: 12.5rem;
+  border-radius: 1.5rem;
+  flex: 0 0 auto;
   max-width: 52.5rem;
   padding: 1.75em;
   width: 100%;
+}
+
+.title {
+  font-size: 100%;
 }
 
 .date-row {

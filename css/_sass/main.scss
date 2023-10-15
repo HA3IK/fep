@@ -27,6 +27,14 @@ $sm-font-size: 16;
 // Import partials
 @import "font", "reset";
 
+// Screen hider
+.scr-hide {
+  overflow: hidden;
+  max-height: px2x(50);
+  position: absolute;
+  top: -(px2x(100));
+}
+
 /**
  * Main CSS
  */
@@ -65,11 +73,16 @@ body {
 
 .main {
   background: $color-white;
-  border-radius: px2x(24);
   border-bottom-right-radius: px2x(200);
+  border-radius: px2x(24);
+  flex: 0 0 auto;
   max-width: px2x(840);
   padding: px2em(56, $font-size);
   width: 100%;
+}
+
+.title {
+  font-size: 100%;
 }
 
 // Date row

@@ -57,6 +57,16 @@ input[type="number"] {
 }
 ```
 
+### Horizontal line
+
+✅ Added horizontal line as `background` - 1px gradient, centered, full width, no repeat.
+
+```css
+.btn-row {
+  background: 50% / 100% 1px no-repeat linear-gradient(#dcdcdc, #dcdcdc);
+}
+```
+
 ### Assets
 
 ✅ Added svg arrow for the mobile version  

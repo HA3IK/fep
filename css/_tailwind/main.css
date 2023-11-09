@@ -1,0 +1,510 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .layout {
+    contain: layout;
+  }
+}
+
+@layer base {
+  :root {
+    --btn-mob-h: 1.125rem;
+    --btn-line-h: 0.25rem;
+  }
+
+  /* Fallback fonts */
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: local("Roboto");
+    size-adjust: 108.090818%;
+    ascent-override: 92.514796%;
+    descent-override: 24.516421%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: local("Thonburi-Light");
+    size-adjust: 99.112767%;
+    ascent-override: 100.895175%;
+    descent-override: 26.737221%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: local("VerdanaPro-Light");
+    size-adjust: 100.897569%;
+    ascent-override: 99.110416%;
+    descent-override: 26.26426%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    src: local("Verdana");
+    size-adjust: 94.461585%;
+    ascent-override: 105.86314%;
+    descent-override: 28.053732%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto");
+    size-adjust: 109.687179%;
+    ascent-override: 91.168358%;
+    descent-override: 24.159615%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Thonburi");
+    size-adjust: 100.68757%;
+    ascent-override: 99.317125%;
+    descent-override: 26.319038%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local("VerdanaPro");
+    size-adjust: 95.968582%;
+    ascent-override: 104.200769%;
+    descent-override: 27.613204%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Verdana");
+    size-adjust: 95.968582%;
+    ascent-override: 104.200769%;
+    descent-override: 27.613204%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: local("Roboto");
+    size-adjust: 111.092505%;
+    ascent-override: 90.015073%;
+    descent-override: 23.853994%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: local("Futura-Medium");
+    size-adjust: 108.896076%;
+    ascent-override: 91.830673%;
+    descent-override: 24.335128%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: local("VerdanaPro");
+    size-adjust: 97.196061%;
+    ascent-override: 102.884828%;
+    descent-override: 27.264479%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    src: local("Verdana");
+    size-adjust: 97.196061%;
+    ascent-override: 102.884828%;
+    descent-override: 27.264479%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local("SourceSansPro-Bold");
+    size-adjust: 114.486514%;
+    ascent-override: 87.346532%;
+    descent-override: 23.146831%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local("Futura-Bold");
+    size-adjust: 93.6875%;
+    ascent-override: 106.737825%;
+    descent-override: 28.285524%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local("Tahoma-Bold");
+    size-adjust: 100.095397%;
+    ascent-override: 99.904694%;
+    descent-override: 26.474744%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    src: local("Arial-BoldMT");
+    size-adjust: 105.461516%;
+    ascent-override: 94.821319%;
+    descent-override: 25.127649%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 800;
+    src: local("SourceSansPro-Bold");
+    size-adjust: 115.983173%;
+    ascent-override: 86.219404%;
+    descent-override: 22.848142%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 800;
+    src: local("Futura-Bold");
+    size-adjust: 94.833333%;
+    ascent-override: 105.448155%;
+    descent-override: 27.943761%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 800;
+    src: local("Tahoma-Bold");
+    size-adjust: 101.344981%;
+    ascent-override: 98.672869%;
+    descent-override: 26.14831%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 800;
+    src: local("Verdana-Bold");
+    size-adjust: 90.397248%;
+    ascent-override: 110.622837%;
+    descent-override: 29.315052%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Android";
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: local("SourceSansPro-Italic");
+    size-adjust: 118.894075%;
+    ascent-override: 84.108481%;
+    descent-override: 22.288747%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Apple";
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: local("Avenir-Oblique");
+    size-adjust: 107.675743%;
+    ascent-override: 92.871428%;
+    descent-override: 24.610928%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-Win";
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: local("VerdanaPro-Italic");
+    size-adjust: 95.6838%;
+    ascent-override: 104.510899%;
+    descent-override: 27.695388%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "fb-LR";
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: local("Verdana-Italic");
+    size-adjust: 95.59005%;
+    ascent-override: 104.613399%;
+    descent-override: 27.722551%;
+    line-gap-override: 0%;
+  }
+}
+
+@layer components {
+  /* Navigation */
+
+  .btn-mob {
+    @apply h-[var(--btn-mob-h)] relative w-[1.5625rem];
+  }
+
+  .btn-line {
+    @apply absolute bg-blue h-[var(--btn-line-h)] w-full;
+  }
+
+  .btn-line-mid {
+    @apply btn-line top-[calc((var(--btn-mob-h)-var(--btn-line-h))/2)];
+  }
+
+  .btn-line-x {
+    @apply animate-btn-x btn-line-mid;
+  }
+
+  .nav-li--hover {
+    @apply hover:text-blue-0.5;
+  }
+
+  .nav-li-peer {
+    @apply mt-6 md:mt-0 md:peer-[]/nav:ml-8;
+  }
+
+  .nav-mob {
+    @apply bg-white flex-col font-bold leading-[1.4375] max-w-[23.4375rem] py-10 px-6 text-[1rem] tracking-[.01785em];
+    @apply animate-nav-mob scale-0;
+  }
+
+  .nav-mob-block {
+    @apply flex flex-col h-full items-center justify-start overflow-y-auto py-10 px-[6.7%] sm:px-6;
+  }
+
+  .nav-mob-wrap {
+    @apply animate-nav-mob-wrap bg-nav-gradient block bottom-0 fixed left-0 right-0 top-0 z-1;
+  }
+
+  /* Content */
+
+  .btn--const {
+    @apply capitalize font-bold inline-block leading-5 py-3 rounded-full text-center text-sm;
+  }
+
+  .btn--color {
+    @apply bg-orange text-pink-light hover:bg-orange-light;
+  }
+
+  .btn-form {
+    @apply btn--const btn--color;
+  }
+
+  .btn-main {
+    @apply btn--const w-[8.5625rem];
+  }
+
+  .btn-main--orange {
+    @apply btn-main btn--color hover:shadow-btn;
+    @apply duration-500 ease-in-out transition-[background-color,box-shadow];
+  }
+
+  .txt {
+    @apply text-[.875rem] leading-loose lg:text-base text-blue-0.5;
+  }
+
+  .subtitle {
+    @apply font-bold leading-[1.4375] text-base text-blue -tracking-[.018em];
+  }
+
+  .section {
+    @apply container flex justify-between;
+  }
+
+  .section-li {
+    @apply lg:pl-[17.33%] max-[380px]:-mx-2;
+  }
+
+  .section-li-peer {
+    @apply peer-[]/about:mt-11.75;
+  }
+
+  .section-li-number {
+    @apply bg-orange mr-[.9375rem] max-[250px]:mr-0 py-2 px-[1.5458rem] rounded-full text-white w-[4.1875rem] lg:absolute max-[250px]:relative lg:left-0 max-[250px]:mb-2 max-[250px]:-mt-3;
+  }
+
+  .section-li-header {
+    @apply subtitle before:section-li-number bg-pink lg:bg-transparent flex items-center rounded-bl-full rounded-tl-full mb-2.5 lg:min-h-[2.4375rem] max-[250px]:flex-col max-[250px]:pb-3 max-lg:-mr-6 max-lg:pr-6;
+  }
+
+  .section-li-title {
+    @apply max-[250px]:text-center;
+  }
+
+  /* Testimonials */
+
+  .quote-block--sm {
+    @apply animate-feed-sm -mx-1.5 pb-10.5 px-[1.3125rem];
+  }
+
+  .feed-item--sm {
+    @apply [&:not(:first-of-type)]:absolute [&:not(:first-of-type)]:opacity-0;
+    @apply first:[animation-delay:0s];
+    @apply [&:nth-of-type(2)]:[animation-delay:10s];
+    @apply [&:nth-of-type(3)]:[animation-delay:20s];
+    @apply last:[animation-delay:30s];
+  }
+
+  .quote-block--md {
+    @apply flex-0 max-w-[33.75rem] ml-7.5 pb-10 px-10;
+  }
+
+  .feed-item--md {
+    @apply first:animate-feed-item-1--md;
+    @apply [&:nth-of-type(2)]:animate-feed-item-2--md;
+    @apply [&:nth-of-type(3)]:animate-feed-item-3--md;
+  }
+
+  .quote-block--xl {
+    @apply w-[24.4%] max-w-[43.75rem] ml-0;
+  }
+
+  .feed-item--stop {
+    @apply [&:nth-of-type(n)]:animate-none;
+  }
+
+  .quote-block {
+    @apply bg-grey-light pt-[3.75rem] relative;
+    @apply max-md:quote-block--sm max-md:feed-item--sm;
+    @apply md:quote-block--md md:feed-item--md;
+    @apply xl:quote-block--xl xl:feed-item--stop;
+  }
+
+  .quote-avatar {
+    @apply absolute h-18 left-1/2 -top-9 -translate-x-1/2 w-18;
+  }
+
+  .quote-name {
+    @apply subtitle mb-[1.1875rem];
+  }
+
+  .quote-txt {
+    @apply txt after:content-[close-quote] before:content-[open-quote] max-md:leading-[1.8571];
+  }
+
+  .feed-indicator {
+    @apply border border-orange h-1.75 rounded-full w-1.75;
+    @apply [animation:feed-indicator_40s_ease-in-out_infinite];
+    @apply first:[animation-delay:0s];
+    @apply [&:nth-of-type(2)]:[animation-delay:10s];
+    @apply [&:nth-of-type(3)]:[animation-delay:20s];
+    @apply last:[animation-delay:30s];
+  }
+
+  @keyframes feed-indicator {
+    1%,
+    24% {
+      @apply bg-orange;
+    }
+    24.5%,
+    100% {
+      @apply bg-transparent;
+    }
+  }
+
+  /* Footer */
+
+  .grid-areas--sm {
+    grid-template-areas: "form" "nav" "socnet" "logo" "copy";
+  }
+
+  .grid-areas--md {
+    grid-template-areas: "form nav" "socnet nav" "logo copy";
+  }
+
+  .grid-areas--lg {
+    grid-template-areas: "logo nav form" "socnet nav copy";
+  }
+
+  .form--invalid {
+    @apply outline outline-1 outline-red text-red placeholder-red;
+  }
+
+  .nav2-li {
+    @apply mb-3.25 last:mb-0 max-[360px]:mb-6 hover:text-orange min-[361px]:max-md:ml-10;
+  }
+
+  .socnet-item {
+    @apply block relative w-8 md:w-5;
+    @apply [&_>_img]:w-full [&:hover>img]:[filter:url(#orange)];
+  }
+
+  /* Other */
+
+  .blob {
+    @apply absolute bg-pink rounded-[17rem] rotate-45;
+  }
+
+  .blob-bottom {
+    @apply blob h-[44.25rem] opacity-[.07] w-[19.4018rem];
+  }
+}

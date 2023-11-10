@@ -152,9 +152,11 @@ Has a numbered list part:
   - `feed-item` - feedback elements that change at the same rate but with different delays to create a queuing effect. `z-index` allows us to copy the quote. One element always remains `relative` to preserve the container size, the others are `absolute`.  
   `animation-duration` = `feed-item` delay * `feed-item` quantity.  
   `feed-item` change/disappear step = 100% duration / `feed-item` quantity.
-  - `feed-indicator` queue position indicator. The animation logic is the same as in `feed-item`.
-  [!WARNING]  
-  These `feed-item` and `feed-indicator` are not related, just visually synchronized.
+  - `feed-indicator` queue position indicator. The animation logic is the same as in `feed-item`.  
+  
+    > [!WARNING]  
+    > These `feed-item` and `feed-indicator` are not related, just visually synchronized.
+
 ```css
 /* Feedbacks elements */
 .animate-feed:first-child {
@@ -266,7 +268,7 @@ Has a numbered list part:
 ```svg
 <svg height="0">
   <filter id="filter">
-    <fecolormatrix values="0.95 0 0 0 0 0 0.38 0 0 0 0 0 0.24 0 0 0 0 0 1 0">
+    <fecolormatrix values="0.95 0 0 0 0 0 0.38 0 0 0 0 0 0.24 0 0 0 0 0 1 0"/>
   </filter>
 </svg>
 ```
@@ -290,10 +292,12 @@ Has a numbered list part:
 
 - [x] Added the tablet design variant. <details>
   <summary>( Show it )</summary>
-  <div style="display:flex;max-width:800px">
-    <img style="width:100%" src="_challenge/screenshot/tablet-part1.png" alt="Tablet design part 1">
-    <img style="width:100%" src="_challenge/screenshot/tablet-part2.png" alt="Tablet design part 2">
-  </div>
+  <table>
+    <tr>
+      <td><img src="_challenge/screenshot/tablet-part1.png" alt="Tablet design part 1"></td>
+      <td><img src="_challenge/screenshot/tablet-part2.png" alt="Tablet design part 2"></td>
+    </tr>
+  </table>
 </details>
 
 ## About

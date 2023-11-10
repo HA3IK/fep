@@ -360,11 +360,11 @@
   }
 
   .btn-main {
-    @apply btn--const w-[8.5625rem];
+    @apply btn--const shadow-btn-white w-[8.5625rem];
   }
 
   .btn-main--orange {
-    @apply btn-main btn--color hover:shadow-btn;
+    @apply btn-main btn--color shadow-btn-orange;
     @apply duration-500 ease-in-out transition-[background-color,box-shadow];
   }
 
@@ -385,7 +385,7 @@
   }
 
   .section-li-peer {
-    @apply peer-[]/about:mt-11.75;
+    @apply peer-[]/about:mt-11.75 md:peer-[]/about:mt-10;
   }
 
   .section-li-number {

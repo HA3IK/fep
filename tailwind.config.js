@@ -35,7 +35,8 @@ module.exports = {
         'nav-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%)',
       },
       boxShadow: {
-        btn: '0 .9375rem .9375rem -.625rem rgb(255, 159, 142)',
+        'btn-orange': '0 .9375rem .9375rem -.625rem hsl(9, 100%, 78%)',
+        'btn-white': '0 .9375rem .9375rem -.625rem hsl(9, 68%, 56%)',
       },
       colors: {
         black: 'hsl(232, 12%, 13%)',
@@ -75,11 +76,19 @@ module.exports = {
             lineHeight: '1.25',
           },
         ],
+        'h1-lg': [
+          '3.5rem',
+          {
+            fontWeight: '700',
+            letterSpacing: '-.018em',
+            lineHeight: '1.1428',
+          },
+        ],
         'h2-lg': [
           '2.5rem',
           {
             fontWeight: '700',
-            letterSpacing: '-.0178em',
+            letterSpacing: '-.0179em',
             lineHeight: '1.1',
           },
         ],
@@ -181,8 +190,7 @@ module.exports = {
         15.5: '3.875rem',
         18: '4.5rem',
         27.5: '6.875rem',
-        36.5: '9.125rem',
-        113: '28.25rem',
+        120: '30rem',
         135: '33.75rem',
         '61em': '15.25em',
       },

@@ -1,0 +1,29 @@
+
+/**
+ * Reset CSS
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr {
+  border-bottom: 0;
+  cursor: help;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+main {
+  display: block;
+}

@@ -1,0 +1,103 @@
+/**
+ * Fallback fonts
+ */
+
+//  500
+
+@font-face {
+  font-family: "fb-Android";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 500;
+  src: local("SourceSansPro-Regular");
+  size-adjust: 93.964876%;
+  ascent-override: 106.422745%;
+  descent-override: 21.284549%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Apple";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 500;
+  src: local("AvenirNextCondensed-Medium");
+  size-adjust: 108.273938%;
+  ascent-override: 92.358329%;
+  descent-override: 18.471666%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Win";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 500;
+  src: local("ArialNovaCond");
+  size-adjust: 98.387536%;
+  ascent-override: 101.638891%;
+  descent-override: 20.327778%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-LR";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 500;
+  src: local("TrebuchetMS");
+  size-adjust: 86.573734%;
+  ascent-override: 115.508475%;
+  descent-override: 23.101695%;
+  line-gap-override: 0%;
+}
+
+// 600
+
+@font-face {
+  font-family: "fb-Android";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 600;
+  src: local("SourceSansPro-Regular");
+  size-adjust: 94.936649%;
+  ascent-override: 105.3334%;
+  descent-override: 21.06668%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Apple";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 600;
+  src: local("AvenirNextCondensed-DemiBold");
+  size-adjust: 104.856406%;
+  ascent-override: 95.368518%;
+  descent-override: 19.073704%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-Win";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 600;
+  src: local("ArialNovaCond-Bold");
+  size-adjust: 96.171657%;
+  ascent-override: 103.980739%;
+  descent-override: 20.796148%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "fb-LR";
+  font-stretch: condensed;
+  font-style: normal;
+  font-weight: 600;
+  src: local("TrebuchetMS");
+  size-adjust: 87.599673%;
+  ascent-override: 114.155677%;
+  descent-override: 22.831135%;
+  line-gap-override: 0%;
+}

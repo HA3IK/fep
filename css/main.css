@@ -1756,7 +1756,6 @@ video {
 .\[grid-area\:socnet\] {
   grid-area: socnet;
 }
-
 @media not all and (min-width: 600px) {
 
   .max-md\:container {
@@ -1876,80 +1875,66 @@ video {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
   }
 }
-
 @media (min-width: 600px) {
 
   .md\:grid-areas--md {
     grid-template-areas: "form nav" "socnet nav" "logo copy";
   }
 }
-
 @media (min-width: 840px) {
 
   .lg\:grid-areas--lg {
     grid-template-areas: "logo nav form" "socnet nav copy";
   }
 }
-
 .\[\&\:user-invalid\]\:form--invalid:user-invalid {
   --tw-text-opacity: 1;
   color: hsl(0 88% 59% / var(--tw-text-opacity));
 }
-
 .\[\&\:user-invalid\]\:form--invalid:user-invalid::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: hsl(0 88% 59% / var(--tw-placeholder-opacity));
 }
-
 .\[\&\:user-invalid\]\:form--invalid:user-invalid::placeholder {
   --tw-placeholder-opacity: 1;
   color: hsl(0 88% 59% / var(--tw-placeholder-opacity));
 }
-
 .\[\&\:user-invalid\]\:form--invalid:user-invalid {
   outline-style: solid;
   outline-width: 1px;
   outline-color: hsl(0, 88%, 59%);
 }
-
 .before\:content-\[\'01\'\]::before {
   --tw-content: '01';
   content: var(--tw-content);
 }
-
 .before\:content-\[\'02\'\]::before {
   --tw-content: '02';
   content: var(--tw-content);
 }
-
 .before\:content-\[\'03\'\]::before {
   --tw-content: '03';
   content: var(--tw-content);
 }
-
 .hover\:text-orange-light:hover {
   --tw-text-opacity: 1;
   color: hsl(12 92% 72% / var(--tw-text-opacity));
 }
-
 .group\/nav:target .group-target\/nav\:hidden {
   display: none;
 }
-
 @media not all and (min-width: 1710px) {
 
   .max-xl\:justify-start {
     justify-content: flex-start;
   }
 }
-
 @media not all and (min-width: 840px) {
 
   .max-lg\:font-light {
     font-weight: 300;
   }
 }
-
 @media not all and (min-width: 600px) {
 
   .max-md\:mb-13\.5 {
@@ -1999,14 +1984,12 @@ video {
     overflow: hidden;
   }
 }
-
 @media (max-width: 360px) {
 
   .max-\[360px\]\:text-center {
     text-align: center;
   }
 }
-
 @media (min-width: 600px) {
 
   .md\:-top-\[6\.4375rem\] {
@@ -2070,11 +2053,7 @@ video {
     height: 1.5rem;
   }
 
-  .md\:w-36 {
-    width: 9rem;
-  }
-
-  .md\:w-36\.5 {
+  .md\:w-\[9\.125rem\] {
     width: 9.125rem;
   }
 
@@ -2155,7 +2134,6 @@ video {
     font-weight: 700;
   }
 }
-
 @media not all and (min-width: 840px) {
 
   @media (min-width: 600px) {
@@ -2177,7 +2155,6 @@ video {
     }
   }
 }
-
 @media (min-width: 840px) {
 
   .lg\:-right-\[6\.1rem\] {
@@ -2194,14 +2171,6 @@ video {
 
   .lg\:mb-10 {
     margin-bottom: 2.5rem;
-  }
-
-  .lg\:mb-36 {
-    margin-bottom: 9rem;
-  }
-
-  .lg\:mb-36\.5 {
-    margin-bottom: 9.125rem;
   }
 
   .lg\:mb-6 {
@@ -2276,7 +2245,6 @@ video {
     font-weight: 500;
   }
 }
-
 @media (min-width: 980px) {
 
   .w980\:ml-\[6\.3125rem\] {
@@ -2291,7 +2259,6 @@ video {
     gap: 2.75rem;
   }
 }
-
 @media (min-width: 1710px) {
 
   .xl\:animate-none {
@@ -2308,7 +2275,6 @@ video {
     padding-right: 1rem;
   }
 }
-
 .peer\/input:user-invalid ~ .peer-\[\:user-invalid\]\/input\:\[\&_\>_\#error-msg--invalid\]\:block > #error-msg--invalid {
   display: block;
 }

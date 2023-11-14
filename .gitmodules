@@ -30,3 +30,7 @@
 	path = manage-landing-page
 	url = git@github.com:HA3IK/fep.git
 	branch = manage-landing-page
+[submodule "testimonials-grid-section"]
+	path = testimonials-grid-section
+	url = git@github.com:HA3IK/fep.git
+	branch = testimonials-grid-section

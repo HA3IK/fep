@@ -46,21 +46,23 @@
     background-position: right px2x(80) top;
   }
 
-  .quote:first-child > .quote-title {
-    margin-bottom: px2x(16);
-  }
-
-  .quote:first-child > .quote-txt {
-    max-width: none;
-  }
-
-  .quote:nth-child(4n + 3) .quote-title,
-  .quote:nth-child(4n + 4) .quote-title,
-  .quote:nth-child(4n + 5) .quote-title {
-    margin-bottom: px2x(24);
+  .quote:nth-child(n + 3):nth-child(-n + 5) {
+    padding-bottom: px2x(26);
   }
 
   .quote:nth-child(5) {
     grid-row: 2 span;
+  }
+
+  .quote:first-child > .quote-title {
+    margin-bottom: px2x(16);
+  }
+
+  .quote:nth-child(n + 3):nth-child(-n + 5) .quote-title {
+    margin-bottom: px2x(24);
+  }
+
+  .quote:first-child > .quote-txt {
+    max-width: none;
   }
 }

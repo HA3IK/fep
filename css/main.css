@@ -192,6 +192,7 @@ body {
 .quote-author {
   display: flex;
   margin-bottom: 1.125rem;
+  align-items: center;
 }
 
 .author-img {
@@ -201,6 +202,7 @@ body {
 .quote:first-child .author-img,
 .quote:nth-child(4n+4) .author-img {
   border: 0.125rem solid var(--color-img-border);
+  box-sizing: content-box;
 }
 
 .author-title {
@@ -317,18 +319,19 @@ body {
   .quote:first-child {
     background-position: right 5rem top;
   }
-  .quote:first-child > .quote-title {
-    margin-bottom: 1rem;
-  }
-  .quote:first-child > .quote-txt {
-    max-width: none;
-  }
-  .quote:nth-child(4n+3) .quote-title,
-  .quote:nth-child(4n+4) .quote-title,
-  .quote:nth-child(4n+5) .quote-title {
-    margin-bottom: 1.5rem;
+  .quote:nth-child(n+3):nth-child(-n+5) {
+    padding-bottom: 1.625rem;
   }
   .quote:nth-child(5) {
     grid-row: 2 span;
+  }
+  .quote:first-child > .quote-title {
+    margin-bottom: 1rem;
+  }
+  .quote:nth-child(n+3):nth-child(-n+5) .quote-title {
+    margin-bottom: 1.5rem;
+  }
+  .quote:first-child > .quote-txt {
+    max-width: none;
   }
 }

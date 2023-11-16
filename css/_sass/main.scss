@@ -85,6 +85,7 @@ body {
 .quote-author {
   display: flex;
   margin-bottom: px2x(18);
+  align-items: center;
 }
 
 .author-img {
@@ -94,6 +95,7 @@ body {
 .quote:first-child .author-img,
 .quote:nth-child(4n + 4) .author-img {
   border: px2x(2) solid var(--color-img-border);
+  box-sizing: content-box;
 }
 
 .author-title {

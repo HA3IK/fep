@@ -1,0 +1,27 @@
+{
+    "cleanUrls": true,
+    "headers": [
+        {
+            "source": "/:path(testimonials-grid-section/)",
+            "headers": [
+                {
+                    "key": "x-content-type-options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "content-security-policy",
+                    "value": "base-uri 'self'; child-src 'none'; connect-src 'self' https://vitals.vercel-insights.com; default-src 'self'; font-src https://fonts.gstatic.com; form-action 'none'; object-src 'none'; script-src 'self' 'sha256-UHRm7Ct7st2n7I8g3/YzgmjAQ6LFxN0wAl0luau6B10='; style-src 'self' https://fonts.googleapis.com; upgrade-insecure-requests;"
+                },
+                {
+                    "key": "link",
+                    "value": "<https://vitals.vercel-insights.com>; rel=preconnect, <https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap>; rel=preload; as=style, <css/main.min.css?v=1.0.0>; rel=preload; as=style, <img/bg-pattern-quotation.svg?v=1.0.0>; rel=preload; as=image; type=\"image/svg+xml\""
+                }
+            ]
+        }
+    ],
+    "regions": ["dub1"],
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
+    ],
+    "trailingSlash": true
+}
